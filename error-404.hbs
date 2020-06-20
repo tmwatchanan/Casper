@@ -15,8 +15,9 @@ into the {body} of the default.hbs template --}}
     <div class="inner">
         <section class="error-message">
             <h1 class="error-code">{{statusCode}}</h1>
-            <p class="error-description">{{message}}</p>
-            <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+            <p class="error-description">⚠️ ไม่เจอสิ่งที่คุณต้องการ ⚠️</p>
+            <p>({{message}})</p>
+            <a class="error-link" href="{{@site.url}}">🔙 กลับไปยังหน้าหลัก</a>
         </section>
 
         {{#get "posts" limit="3" include="authors,tags"}}
