@@ -5,6 +5,8 @@ into the {body} of the default.hbs template --}}
 
 <header class="site-header">
     {{> site-header}}
+    <link rel="stylesheet" href="{{asset "css/kudosplease-min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/blogwai.css"}}">
 </header>
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
@@ -109,6 +111,8 @@ into the {body} of the default.hbs template --}}
                 </div>
             </section>
 
+            {{> kudos}}
+
             {{!-- Email subscribe form at the bottom of the page --}}
             {{#if @labs.members}}
                 {{> subscribe-form}}
@@ -177,6 +181,22 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+
+{{!-- KudosPlease --}}
+<script src="{{asset "js/kudosplease-min.js"}}"></script>
+<script>
+    new KudosPlease({ 
+    el : '.kudos',
+    duration : 1500,
+    persistent : true,
+    status : {
+      alpha: 'fontelico-emo-shoot',
+      beta: 'fontelico-emo-shoot',
+      gamma: 'fontelico-emo-beer'
+    }
+});
+</script>
+
 <script>
     $(document).ready(function () {
         // FitVids - start
