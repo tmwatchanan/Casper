@@ -150,7 +150,7 @@ a:hover {
 }
 b,
 strong {
-    font-weight: bold;
+    font-weight: 500;
 }
 i,
 em,
@@ -282,7 +282,7 @@ html {
 body {
     overflow-x: hidden;
     color: color(var(--midgrey) l(-30%));
-    font-family: Prompt, sans-serif;
+    font-family: Pridi, serif;
     font-size: 1.6rem;
     line-height: 1.6em;
     font-weight: 400;
